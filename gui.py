@@ -15,7 +15,7 @@ from model import efficientnetv2_s as create_model
 class EthnicClothingRecognitionApp(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("少数民族衣饰识别系统")
+        self.setWindowTitle("Xiangxi Minority Costume Recognition System")
         self.setGeometry(100, 100, 1000, 1200)
 
         # 主窗口布局
@@ -24,25 +24,25 @@ class EthnicClothingRecognitionApp(QMainWindow):
         self.layout = QVBoxLayout(self.central_widget)
 
         # 标题
-        self.title_label = QLabel("少数民族衣饰识别系统", self)
+        self.title_label = QLabel("Xiangxi Minority Costume Recognition System", self)
         self.title_label.setStyleSheet("font-size: 30px; font-weight: bold;")
         self.title_label.setAlignment(Qt.AlignCenter)
         self.layout.addWidget(self.title_label)
 
         # 图片显示区域
-        self.image_label = QLabel("上传的图片将在这里显示", self)
+        self.image_label = QLabel("The uploaded image will be displayed here", self)
         self.image_label.setFixedSize(950, 800)
         self.image_label.setStyleSheet("background-color: gray; border: 1px solid black;")
         self.image_label.setAlignment(Qt.AlignCenter)
         self.layout.addWidget(self.image_label)
 
         # 上传按钮
-        self.upload_button = QPushButton("上传图片", self)
+        self.upload_button = QPushButton("Upload Image", self)
         self.upload_button.clicked.connect(self.upload_image)
         self.layout.addWidget(self.upload_button)
 
         # 分类结果显示
-        self.result_label = QLabel("分类: \n置信度: ", self)
+        self.result_label = QLabel("class: \nconfidence: ", self)
         self.result_label.setStyleSheet("font-size: 20px;")
         self.layout.addWidget(self.result_label)
 
@@ -107,7 +107,7 @@ class EthnicClothingRecognitionApp(QMainWindow):
         # 获取分类结果和置信度
         class_name = self.class_indices[str(predict_cla)]
         confidence = predict[predict_cla].item() * 100
-        return f"分类: {class_name}\n置信度: {confidence:.2f}%"
+        return f"class: {class_name}\nconfidence: {confidence:.2f}%"
 
 
 if __name__ == "__main__":
