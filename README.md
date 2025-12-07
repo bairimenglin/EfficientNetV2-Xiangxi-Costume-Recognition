@@ -37,4 +37,5 @@ class_indices.json  - Class index–to–name mapping
 requirements.txt    - Python dependencies
 ```
 GUI example
-![gui example](gui_example.png)
+![GUI Example](gui%20example.png)
+
