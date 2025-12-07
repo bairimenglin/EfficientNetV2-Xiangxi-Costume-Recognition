@@ -5,7 +5,7 @@ This project implements an image classification system for recognizing tradition
 
 ---
 
-## 📦 Installation
+##  Installation
 
 Make sure Python is installed.
 
@@ -15,12 +15,26 @@ Install all required packages:
 pip install -r requirements.txt
 ```
 
-🚀 How to Run the Program
+ How to Run the Program
 
 Run the PyQt5 GUI:
-
+```python
 python gui.py
-
+```
 
 This will open the GUI window.
 You can upload an image and get the predicted ethnic group.
+
+Files in This Project：
+```python
+gui.py              - PyQt5 GUI interface
+predict.py          - Loads trained model and performs predictions
+model.py            - EfficientNetV2 model definition
+train.py            - Training code (optional)
+utils.py            - Helper functions
+calculate_m_s.py    - Evaluation helper
+class_indices.json  - Class index–to–name mapping
+requirements.txt    - Python dependencies
+```
+GUI example
+![GUI Example](gui_example.png)
