@@ -21,7 +21,7 @@ Run the PyQt5 GUI:
 ```python
 python gui.py
 ```
-Upload image for prediction from data.zip
+The dataset was split into 80% for training and 20% for testing. Upload last 20% image for prediction from data.zip
 
 This will open the GUI window.
 You can upload an image and get the predicted ethnic group.
